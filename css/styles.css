@@ -1,0 +1,141 @@
+*{
+	font: 18px 'Inconsolata','sans-serif'; 
+	color:#222222;
+}
+body{
+	background:#92D173;
+	background-size:cover;
+}
+main{
+	width:920px;
+	height:700px;
+	position:absolute;
+	overflow:hidden;
+	top:50%;
+	left:50%;
+	margin-top:-350px;
+	margin-left:-460px;
+	
+}
+input{
+	background:#ffffff;
+	height:40px;
+	width:100%;
+	display:block;
+	border:none;
+	color:#000000;
+	padding:10px;
+	font-size: 18px; 
+}
+
+#output{
+	display:block;
+	color:#111111;
+	overflow:auto;
+	float:left;
+	width:70%;
+	height:500px;
+}
+
+#output #report{
+	display:block
+	width:100%;
+	padding:10px;
+	font-size: 18px; 
+}
+
+.win{
+	overflow:hidden;
+	width:100%;
+	background:none;
+}
+
+h1{
+  font-size: 16px; 
+	font-weight:400;
+	padding:0px;
+	margin:0px;
+	
+}
+
+h2{
+  	font: 30px; 
+  	padding:0px;
+  	margin:0px;
+}
+
+p{
+	padding:10px;
+	margin:0;
+}
+
+
+
+
+p.usr{
+	background-color:rgb(260,260,260);
+}
+p.foe{
+	background-color:rgb(260,260,260);
+}
+p.dark{
+	background-color:rgb(260,260,260);
+}
+p.darker{
+	background-color:rgb(260,260,260);
+}
+
+p.sceneTitle{
+	background-color:rgb(0,0,0);
+	color:white;
+	padding:20px,0,20px,0;
+}
+
+p.question{
+	background-color:#9D7AA7;
+	color:white;
+	padding:20px,0,20px,0;
+}
+p.report{
+	background-color:#FF8337;
+	color:white;
+	padding:20px,0,20px,0;
+}
+
+.stats{
+	float:left;
+	padding:10px;
+	width:27.6%
+}
+
+span{
+	padding:0;
+	margin:0;
+}
+
+span.red{
+	color:#DB0B0B;
+}
+
+span.green{
+	color:#5ADC6D;
+}
+
+span.orange{
+	color:#FF8337;
+}
+
+span.yellow{
+	color:#FF8800;
+}
+
+span.purple{
+	color:#8806C4;
+}
+
+figure{
+	padding:20px;
+	margin:10px;
+	background:#ffffff;
+	border:1px #333333 solid;
+}
