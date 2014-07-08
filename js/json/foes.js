@@ -121,17 +121,5 @@
   // Level 2
   // ==============================
 	
-	/*,'worms','ooze','spider','Troll']
-	['Raggamoffyn'],
-	['knocker','chocking hand','poisoned canary','cloaker','shrooms','phasm in armor','chain golem','Shadowmist'],
-	['cloud beasts','dun stalker','cliff stalker','scrab','Lawman & Wurm'],
-	['golem','effigy','forman','molten giant','Dante'],
-	['kraken','Guardian'],
-	['Tickles & Smiles'],
-	['plauge ooze','Wraith'],
-	['dead ancestor','Preacherman'],
-	['ice wrymlings','Dark Knight'],
-	[
-		'Hellfire Wrym':{boss:true,health:10000,forms:3,weapon:['bullet','slash','drain','blast','confusion','fear','hypnotism'], size:3.2}	
-	]*/
+
 }
