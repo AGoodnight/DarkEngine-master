@@ -1,12 +1,26 @@
 {
-   	bread1:{'a loaf of wheat bread'}
-  	bread2:{'a loaf of marbled rye bread'},
-  	pots:{
+   	key:{
+   	  windmill:{},
+   	},
+   	weapon:{
+   	  sword:{},
+   	  bow:{}
+   	},
+    hint:{
+      tutorial:{}
+    },
+    tools:{
+      compass:{},
+      hammer:{}
+    },
+   	food:{
+   	  bread:{'a loaf of wheat bread'},
+   	  apple:{}
+   	},
+  	potion:{
   	  hp1:{'bottle of water'}
   	},
-  	note:[
-  	  "Help",
-  	  "Go north",
-  	]
-
+  	note:{
+  	  wife:{str:'wife',desc:'Good luck'}
+  	}
 }

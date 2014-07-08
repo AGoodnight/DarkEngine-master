@@ -3,9 +3,9 @@
 ['the woods'],
 // Here you find the strength to carry onward, knowing the courage to protect those dear to this life.
 ['windmill fields'],
-// the old windmill on the edge of the ridge, the flower fields spanning the world, the sky filled with a brilliant day shining on the far shores. You can see the windmill from where you have come out from the forest dark and deep.
+// the old windmill on the edge of the ridge, the flower fields spanning the world, the sky filled with a brilliant day shining on the far shores. You can see the windmill from where you have come out from the forest dark and deep. You explore the windmill, survive an attack and then fall into true fearful area.
 ['silent mines']
-// Here there is a great darkness, a shadow buried by the earth, of ancient times, here in the mines that are sealed off from the world above. The shadow of the past, that is now the present lies in wish
+// After falling tumbling through the dark borrows, here there is a great darkness, a shadow buried by the earth, of ancient times, here in the mines that are sealed off from the world above. The shadow of the past, that is now the present lies in wish
 ['the desert'],
 //abandoned by luck and by any souls, the desert stretches far, our knight is alone, bones litter the sand dried by the blazing sun.
 ['the jungle'],
@@ -21,7 +21,7 @@
 ['the carnival'],
 // The sky is of a pale grey, far on the horizon a wall of cloud and mist remains thundering. The towns are burned and the mad march with a merciless ignorance.
 ['eternity'],
-// the fields of the dead
+// the fields of the dead, long gone, walk again
 ['east town'],
 // Here the mad, the monster and the fears of every last creature in these lands have taken the city.
 ['the cathedral'],

@@ -1,28 +1,44 @@
 function game(params){
-
+  
+  this.init = function(){
+    //params
+    for(var i = 0 ; i<params.inventory.length ; i++){
+      usr.inventory.push(items[ params.inventory[i] ]);
+    }
+  }
   // constructors
   function scene(objId){
     //json call to create obj -- areas.json
-    return this;
+    var obj = region[0].scenes[objId]
+    return obj;
   };
   function foe(objId){
     //json call to create obj -- foes.json
-    var effectPool=[];
-    var attack = function(){};
-    var gain = function(){};
-    
-    return this;
+    var obj = foes[objId];å   
+    obj.effectPool=[];
+    obj.attack = function(){};
+    obj.gain = function(){};
+    return obj;
   };
   function puzzle(objId){
     // json call to create obj -- puzzles.json
-    return this;
+    var obj = {};
+    obj.started = false;
+    obj.unlocked = false;
+    obj.complete = false;
+    return obj;
   };
   function item(objId){
     // load json object from -- items.json
-    return this;
+    var obj = items[objId];
+    obj.taken = false;
+    obj.dropped = false;
+    return obj;
   };
 	
-	// data
+	var g = this;
+	
+	// data and commands
 	this.defaults={
 		level:1, // chance of being ambushed
 		assign:function(params,defaults){
@@ -62,31 +78,34 @@ function game(params){
 		  ]
 		]}	
 			
+	};
+	this.events = {
+	  travel:function(where){
+		  if(!g.data.battle){
+		    this.scene = new scene(where);
+		  }else{
+		    gameLog("You are in battle");
+		  }
+		}
+		battle:function(who){
+		  if(!g.data.battle){
+		    g.data.battle = true
+		  }
+		}
 	};	
 	this.data={
-		curArea:{ /* an instance of scene */ }, //longitude and latitude
-		inBattle:false,
-		foeAttacking:false,
+		scene:{ /* an instance of scene */ }, //longitude and latitude
+		battle:false,
 		gameOver:false
 		watch:{
 		  end:function(){},
 		  start:function(){},
 		  puzzle:function(){}
 		}
-		swtichArea(obj){
-		  if(!inBattle){
-		    curArea = new scene(data.nxtArea);
-		  }
-		}
 	};
 	this.usr = {
 	  name:'you',
-	  inventory:[
-	    it.bread1, // an instance of an item object
-	    it.bread1,
-	    it.pots.hp1,
-	    it.note[0]
-	  ],
+	  inventory:[],
 		cmndLog:[], // log the last few commands executed by the user
 		effectPool:[],
 		attack:function(){},
@@ -153,13 +172,22 @@ function game(params){
 				      break;
 				  // a,b = 1, b,a = 1
 				  case 2:
+				      /*isAttack = w.target]
+				      isRead = inventory['str']
+				      isKey = inventory['str']
+				      isDrop = inventory['str']
+				      isInspect inventory['str'], w.scene['str']
+				      isTake = w.scene.take['str']
+				      isLook = w.scene['str']*/
 				      break;
 				  case 3:
-				      isLook = ['at','towards','around'];
-				      isTake = ['a'];
-				      isDrop = ['a'];
-				      isInspect = ['the','a'];
-				      isAttack = ['with']
+				      /*isLook = ['at','at the','at a','towards','around'];
+				      isTake = ['a','the'];
+				      isDrop = ['a','the'];
+				      isInspect = ['the','a','from'];
+				      isAttack = ['with', 'using'];
+				      isKey = ['use', 'use on', 'use with', 'unlock']
+				      isRead = ['written by', 'from', 'by']*/
 				      break;
 			  }
       };			
@@ -200,12 +228,15 @@ function game(params){
   
   // exec when creating new instance
 	defaults.assign(params,this.defaults);
-	
+
 	// return new instance
 	return this
 	
 }
 
-var w = new game({health:100});
+var w = new game({
+  inventory:['bread','apple','note']
+});
+
 w.gameLoop.start();
 w.validate('help');
