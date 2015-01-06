@@ -11,7 +11,7 @@ look south<br/>
 inspect sign<br/>
 go north<br/>
 look<br/>
-take acorn</br>
+take acorn<br/>
 go east<br/>
 look<br/>
 go east<br/>
