@@ -16,7 +16,7 @@ go east<br/>
 look<br/>
 go east<br/>
 
-when encountering a foe:
+when encountering a foe:<br/>
 strike<br/>
 firehammer<br/>
 
