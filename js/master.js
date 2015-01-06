@@ -1,6 +1,10 @@
 // =========================================================================
 // DARK ENGINE 0.2
 // Created by Adam Goodnight ©2014
+/*
+	Disclaimer:
+	This was one of my first attempts at creating a proper Javascript driven application
+*/
 // =========================================================================
 
 
@@ -627,7 +631,7 @@ var thisFoe=function(arr){
 var damage=function(who,value){
 	who.phys.hp -= value;
 	gameLog(who.name+" takes <span class='red'>"+value+" damage</span>!");
-	_damage = value
+	_damage = value;
 	//who.mp -=value	
 	//console.log('- end damage -'+who.phys.hp+' - ' +who.name);
 	updateStats();
@@ -931,7 +935,7 @@ var foes=[
 				func:function(t){
 					//p = t.elem.drain(['fire','water'],.5);
 					p = luck.chance(6,t.phys.guts);
-						return parseInt(p);
+						return parseInt(p/2);
 				}},
 				{name:'slam', 
 				func:function(t){
@@ -941,7 +945,7 @@ var foes=[
 						t.elem.fire
 					);
 					p += t.elem.fire;				
-					return parseInt(p);
+					return parseInt(p/2);
 				}}
 			
 			];
@@ -984,7 +988,7 @@ var foes=[
 				func:function(t){
 					//p = t.elem.drain(['fire','water'],.5);
 					p = luck.chance(6,t.phys.guts);
-						return parseInt(p);
+						return parseInt(p/2);
 				}},
 				{name:'hoot', 
 				func:function(t){1
@@ -994,7 +998,7 @@ var foes=[
 						t.elem.fire
 					);
 					p += t.elem.fire;				
-					return parseInt(p);
+					return parseInt(p/2);
 				}}
 			
 			];
@@ -1018,10 +1022,10 @@ var usr={
 	name:'Knight',
 	phys:{
 			//stamina : 100,
-			maxHP:20,
-			maxMP:3,
-			hp : 20, // health -- are you dead or not dead? -- being poisoned would affect this number
-			mp : 3, // magic -- used for casting spells or enchantments -- confusion affects this number
+			maxHP:50,
+			maxMP:10,
+			hp : 50, // health -- are you dead or not dead? -- being poisoned would affect this number
+			mp : 10, // magic -- used for casting spells or enchantments -- confusion affects this number
 			guts : 6, //physical strength -- for strikes and defensive moves -- being poisoned would affect this number
 			weak:{
 				earth:0,
@@ -1212,7 +1216,7 @@ var gameLog = function(val,go){
 	
 	scrollDown();
 };
-var helpMessage="use lower case words only<br/> To attack, or perform magic just type in the name associated with that action, below are the most important commands, but you can explore others, like 'dance'<br/><br/>'heal' - heal yourself<br/>'attacks' - view your attacks<br/>'inventory' - view your inventory<br/>'use' - use an item (use item) <br/> 'look' - look at something (look around)<br/> 'eat' - eat food (eat apple)<br/> 'drink' - drink something (drink potion)<br/>'take' - take something from the area (take pencil)<br/>'speak' - speak to someone/something (talk to tree)"
+var helpMessage="use lower case words only<br/><br/>To go in a direction, type 'go' and then type a cardinal direction.<br/>To inspect something in the field type 'inspect' followed by the item you wish to inspect<br/>To attack, type the name of the attack alone i.e. 'strike'.<br/> To use an item type the name of the item after 'use'.<br/> To look at something type in the direction or object following 'look'. To look at where you are standing simply type 'look' <br/></br>Other useful commands<br/>'heal' - heal yourself<br/>'attacks' - view your attacks<br/>'inventory' - view your inventory<br/>'use' - use an item (use item) <br/> 'look' - look at something (look around)<br/> 'eat' - eat food (eat apple)<br/> 'drink' - drink something (drink potion)<br/>'take' - take something from the area (take pencil)<br/>'speak' - speak to someone/something (talk to tree)"
 
 
 
